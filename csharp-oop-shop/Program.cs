@@ -2,11 +2,22 @@
 {
     class Prodotto
     {
-        private int codice;
-        private string nome;
-        private string descrizione;
-        private decimal prezzo;
-        private decimal iva;
+        //Attributes
+        private int code;
+        private string name;
+        private string description;
+        private decimal price;
+        private decimal vat;
+        
+        // Costruttore
+        public Prodotto(string nome, string descrizione, double prezzo, double iva)
+        {
+            this.codice = GeneraCodice();
+            this.nome = nome;
+            this.descrizione = descrizione;
+            this.prezzo = prezzo;
+            this.iva = iva;
+        }
     }
     internal class Program
     {
